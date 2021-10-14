@@ -31,7 +31,8 @@
         (last-command last-command)
         (buffer-modified (buffer-modified-p))
         (hippie-expand-function (or hippie-expand-function 'hippie-expand)))
-    (cl-flet ((ding))      ; avoid the (ding) when `hippie-expand' is exhausted
+    (cl-letf (((symbol-function 'ding) #'ignore)) ; inhibit ding when
+                                        ; `hippie-expand' exhausts completions
       (while (progn
                (funcall hippie-expand-function nil)
                (setq last-command 'hippie-completing-read-expand-completions)
