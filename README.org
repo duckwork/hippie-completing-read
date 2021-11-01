@@ -31,6 +31,33 @@ and you should be good to go.
    (global-set-key (kbd "M-/") #'hippie-completing-read)
  #+end_src
 
+* Customizing
+
+There are a number of customization options available for
+=hippie-completing-read=, of which this is a not-definitely up-to-date list.  For
+the definitive list, see the Easy Customization group for this package.
+
+- ~hippie-completing-read-prompt~ :: The prompt to display with
+  ~hippie-completing-read-expand-with~.  Default: =Hippie:=.
+- ~hippie-completing-read-function~ :: Function to use to display and select from
+  ~hippie-expand~ selections.  Should be compatible with ~completing-read~.
+  Default: ~completing-read~.
+- ~hippie-completing-read-function-parameters~ :: Further parameters to pass to
+  ~hippie-completing-read-function~. By default, add ~he-search-string~ (the thing
+  we're completing) as initial input.  This variable is risky, since its values
+  are evaluated when passed to ~hippie-completing-read~.
+- ~hippie-completing-read-cycle-threshold~ :: Number of expansion candidates
+  needed before using ~completing-read~.  Depending on this setting,
+  ~hippie-completing-read~ may use cycling, whereby invoking a completion command
+  several times in a row completes each of the candidates in turn, cyclically,
+  or uses a completion framework to choose an expansion.
+  + If nil, never cycle.
+  + If t, cycling is always used.
+  + If ~inherit~, "inherit" the value from ~completion-cycle-threshold~.
+  + If an integer, cycling is used so long as there are not more completion
+    candidates than in this number.
+  + *Default*: ~inherit~.
+
 * Contributing
 
 IDK, open an issue, or whatever.
