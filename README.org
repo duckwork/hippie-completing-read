@@ -64,17 +64,8 @@ IDK, open an issue, or whatever.
 
 * License
 
-=hippie-completing-read= and associated files are all licensed under the Good
-Choices License, the entire text of which is quoted below.
+Copyright (C) 2021--2022 Case Duckworth <acdw@acdw.net>
 
-#+begin_example
-  License:
+Usage of the works is permitted provided that this instrument is retained with the works, so that any entity that uses the works is notified of this instrument.
 
-  Everyone is permitted to do whatever with this software, without
-  limitation.  This software comes without any warranty whatsoever,
-  but with two pieces of advice:
-
-  - Be kind to yourself.
-
-  - Make good choices.
-#+end_example
+DISCLAIMER: THE WORKS ARE WITHOUT WARRANTY.
