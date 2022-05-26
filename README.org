@@ -10,7 +10,10 @@ Deep in the back waters of EmacsWiki, I found it: code for an [[https://www.ema
 You should honestly know how to install packages in Emacs, but you can use =straight.el=:
 
 #+begin_src emacs-lisp
-  (straight-use-package '(hippie-completing-read :host github :repo "duckwork/hippie-completing-read"))
+  (straight-use-package
+   '(hippie-completing-read
+     :host nil
+     :repo "https://codeberg.org/acdw/hippie-completing-read.el"))
 #+end_src
 
 and you should be good to go.
