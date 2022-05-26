@@ -1,9 +1,12 @@
-;;; hippie-completing-read.el --- peace love compl  -*- lexical-binding: t; -*-
+;;; hippie-completing-read.el --- Peace love complete  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2021 Case Duckworth
+;; Copyright (C) 2021--2022 Case Duckworth
 
 ;; Author: Case Duckworth <acdw@acdw.net>
 ;; License: Fair
+;; URL: https://codeberg.org/acdw/hippie-completing-read.el
+;; Package-Version: 0.2
+;; Package-Requires: ((emacs "24.3"))
 
 ;;; Commentary:
 
