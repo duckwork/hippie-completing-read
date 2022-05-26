@@ -45,23 +45,12 @@ This variable is risky, since its values are evaluated when passed to `hippie-co
   :type 'list
   :risky t)
 
-(defcustom hippie-completing-read-cycle-threshold 'inherit
+(defcustom hippie-completing-read-threshold 0
   "Number of expansion candidates needed before using `completing-read'.
-Depending on this setting, `hippie-completing-read' may use
-cycling, whereby invoking a completion command several times in a
-row completes each of the candidates in turn, cyclically, or uses
-a completion framework to choose an expansion.
-
-If nil, never cycle.
-If t, cycling is always used.
-If `inherit', \"inherit\" the value from `completion-cycle-threshold',
-which see.
-If an integer, cycling is used so long as there are not more completion
-candidates than in this number."
-  :type '(choice (const :tag "Never cycle" nil)
-                 (const :tag "Always cycle" t)
-                 (const :tag "Use `completion-cycle-threshold' value.")
-                 (integer :tag "Threshold")))
+The more traditional \"cycling\" behavior for hippie-complete
+will be used so long as there are not more completion candidates
+than in this number."
+  :type '(integer :tag "Threshold"))
 
 (defun hippie-completing-read-expand-completions
     (&optional hippie-expand-function)
