@@ -77,13 +77,9 @@ with `make-hippie-expand-function'."
   "Offer `completing-read' based completion using `hippie-expand'.
 The supplied HIPPIE-EXPAND-FUNCTION will provide completion items."
   (let ((collection (hippie-completing-read-expand-completions
-                     hippie-expand-function))
-        (threshold (if (eq hippie-completing-read-cycle-threshold 'inherit)
-                       completion-cycle-threshold
-                     hippie-completing-read-cycle-threshold)))
+                     hippie-expand-function)))
     (if collection
-        (if (and threshold (or (eq threshold t)
-                               (> (length collection) threshold)))
+        (if (> (length collection) hippie-completing-read-threshold)
             (let ((selection
                    (apply hippie-completing-read-function
                           hippie-completing-read-prompt
