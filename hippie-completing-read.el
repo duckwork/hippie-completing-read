@@ -95,8 +95,8 @@ The supplied HIPPIE-EXPAND-FUNCTION will provide completion items."
                ;; uses 0 --- effectively enabling the completing-read UI in all
                ;; cases. (CD 2022-07-26)
                (if (numberp hippie-completing-read-threshold)
-                                       hippie-completing-read-threshold
-                                     0))
+                   hippie-completing-read-threshold
+                 0))
             (let ((selection
                    (apply hippie-completing-read-function
                           hippie-completing-read-prompt
